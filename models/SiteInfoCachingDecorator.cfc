@@ -8,6 +8,10 @@ component SiteInfoCachingDecorator implements = "ISiteInfo" {
 	function init(ISiteInfo base) {
 		this.base = base;
 
+		/*
+		 * This gets instantiated on application startup, but in the very off chance
+		 * that it's not there, we need it to exist for caching to work.
+		 */
 		if(!structKeyExists(application, "appCache")) {
 			application.appCache = {};
 		}

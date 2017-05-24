@@ -1,0 +1,13 @@
+This is a sample ColdFusion application that allows you to enter a URL and it will grab and cache information about the site in question.
+
+This is not currently an example of utterly perfect design; it's more to show that I can in fact program in ColdFusion.
+
+Progressive enhancements would (or will) include:
+* Proper error handling
+* Unit testing
+* An external config file of some variety
+* One-page JS app functionality in lieu of not having pretty URL capability short of using a different server than the built-in CF development server
+* Some kind of minification for CSS (probably via Grunt and plugins)
+* A provisioning system like Vagrant to set up a development environment (which would remedy the pretty URL issue)
+
+Ultimately you'd probably want to use a proper MVC framework like Coldbox, but I felt this code sample was trivial enough that I could forego that effort.

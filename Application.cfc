@@ -9,26 +9,17 @@ component {
 		/* 
 		 * This can be in application scope since there's no need right now to
 		 * reinstantiate it for every request.
-		 *
-		 * TEMPORARILY MOVED to onRequestStart to init new version each request.
 		 */
-		// application.siteInfo = new models.SiteInfo();
-		// This can be removed or swapped depending on caching requirements.
-		// application.siteInfo = new models.SiteInfoCachingDecorator(application.siteInfo);
+		application.siteInfo = new models.SiteInfo();
+		// This decorator can be removed or swapped depending on caching requirements.
+		application.siteInfo = new models.SiteInfoCachingDecorator(application.siteInfo);
 		application.appCache = {};
-		// application.view = new views.View();
-		// application.controller = new controllers.SiteController();
+		application.view = new views.View();
+		application.controller = new controllers.SiteController();
 	}
 
 
 	function onRequestStart() {
-
-		// These app vars need to be moved back to onApplicationStart after development.
-		application.siteInfo = new models.SiteInfo();
-		application.siteInfo = new models.SiteInfoCachingDecorator(application.siteInfo);
-		application.view = new views.View();
-		application.controller = new controllers.SiteController();
-
 		if(structKeyExists(url, 'reinit')) {
 			onApplicationStart();
 		}
