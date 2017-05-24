@@ -1,0 +1,52 @@
+body {
+	background: #c7cfdd;
+	font-family: 'Lato', sans-serif;
+}
+
+main, footer, nav {
+	border-radius: 4px;
+	box-shadow: 0 0 5px #303a4c;
+	max-width: 800px;
+}
+
+main {
+	margin: 20px auto;
+	border: 1px solid #000;
+	background: #fff;
+}
+
+footer {
+	margin: 0 auto;
+	padding: 6px 20px;
+	background: #d7dce5;
+	border: 1px solid #98a3b7;
+	color: #545f72;
+	font-size: 10px;
+}
+
+nav {
+	margin: 10px auto;
+	background: #fff;
+}
+
+nav li a, nav li a:hover, nav li a:visited {
+	text-decoration: underline;
+}
+
+form label {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+form label:after {
+	content: ":";
+}
+
+.pad-top {
+	padding-top: 10px;
+}
+
+.centered {
+	float: none;
+	margin: 0 auto;
+}
